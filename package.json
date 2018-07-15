@@ -8,8 +8,10 @@
   "author": "Ezra Singh",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.53",
     "@babel/preset-env": "^7.0.0-beta.53",
-    "babel-core": "^6.26.3",
+    "@babel/preset-react": "^7.0.0-beta.53",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
