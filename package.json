@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Basic UI for interacting with the Anagramer server",
   "scripts": {
-    "start": "webpack-dashboard --minimal -- webpack-dev-server --config=webpack.config.dev.js"
+    "start": "webpack-dashboard --minimal -- webpack-dev-server --config=webpack.config.dev.js",
+    "build": "NODE_ENV=production webpack -p --config=webpack.config.prod.js"
   },
   "author": "Ezra Singh",
   "license": "MIT",
@@ -26,11 +27,13 @@
     "postcss-loader": "^2.1.6",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "url-loader": "^1.0.1",
     "webpack": "^3.12.0",
     "webpack-cli": "^2.1.5",
     "webpack-dashboard": "^2.0.0",
-    "webpack-dev-server": "^2.11.2"
+    "webpack-dev-server": "^2.11.2",
+    "webpack-manifest-plugin": "^2.0.3"
   },
   "dependencies": {
     "handlebars": "^4.0.11",
