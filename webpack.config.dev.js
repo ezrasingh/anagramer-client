@@ -10,7 +10,7 @@ const SRC    =  path.resolve(__dirname, 'src')
 const PUBLIC =  path.resolve(__dirname, 'public')
 const BUILD   =  path.resolve(__dirname, 'build')
 // Dev Server Default Port
-const PORT = process.env.PORT || 5001
+const PORT = process.env.PORT || 5000
 
 module.exports = {
     devtool: 'inline-source-map',
