@@ -1,0 +1,12 @@
+# Development/run-time
+node_modules
+build
+
+# NPM log files
+*.log*
+
+# IDE
+.vscode/
+
+# OS
+.DS_STORE
