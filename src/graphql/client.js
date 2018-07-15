@@ -1,4 +1,5 @@
-import { ApolloClient } from 'apollo-client'
+import 'cross-fetch/polyfill'
+import ApolloClient from 'apollo-boost'
 import { createHttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
