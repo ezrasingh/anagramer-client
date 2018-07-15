@@ -1,5 +1,5 @@
 # Development/run-time
-node_modules
+node_modules/
 build
 
 # NPM log files
