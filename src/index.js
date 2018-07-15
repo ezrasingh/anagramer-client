@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import UI from './containers/UI'
 // Redux
 import { ApolloProvider } from 'react-apollo'
-import client from './client'
+import client from './graphql/client'
 // Styling
 import './styles/core.scss'
 // Utils
