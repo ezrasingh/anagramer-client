@@ -1,20 +1,25 @@
 
 const Status = ({ anagrams }) => {
     return(
-        <div className="box">
-            <div className="container has-text-centered">
+        <div className="status box">
+            <div className="container">
                 {
-                    anagrams && anagrams.size ? 
-                        <div classname="tags">
+                    anagrams && anagrams.length ? 
+                        <div className="animated fadeInUp tags">
                             {anagrams.map((anagram, id) => {
                                 return(
-                                    <div key={id.toString()} className="tag">
+                                    <span 
+                                        key={id.toString()} 
+                                        className="tag is-medium is-info"
+                                    >
                                         {anagram}
-                                    </div>
+                                    </span>
                                 )
                             })}
                         </div> :
-                        'No anagrams found.'
+                        <span className="animated fadeInUp tag is-danger is-medium">
+                            No anagrams found.
+                        </span>
                 }
             </div>
         </div>
