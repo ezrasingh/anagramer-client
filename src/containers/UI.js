@@ -7,11 +7,8 @@ import Layout from '../components/Layout'
 
 class UI extends Component{
     state = { word : "" }
-    updateQuery(event){
-        this.setState({ query: event.target.value })
-    }
-    actions = {
-        update: this.updateQuery.bind(this)
+    updateQuery = event =>{
+        this.setState({ word: event.target.value.toLowerCase() })
     }
     render(){
         return(
@@ -25,8 +22,8 @@ class UI extends Component{
                     }
                     return <Layout
                                 loading={loading} 
-                                anagrams={data}
-                                actions={this.actions}
+                                anagrams={data ? data.anagrams : []}
+                                update={this.updateQuery}
                                 state={this.state}
                             />
                 }}
