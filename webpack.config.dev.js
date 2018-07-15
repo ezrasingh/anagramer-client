@@ -15,11 +15,11 @@ const PORT = process.env.PORT || 5001
 module.exports = {
     devtool: 'inline-source-map',
     context: SRC,
-    entry: SRC + '/app.js',
+    entry: SRC + '/index.js',
     output: {
         path: BUILD,
         publicPath: '/',
-        filename: 'app.js'
+        filename: 'index.js'
     },
     module: {
         loaders: [
@@ -42,6 +42,13 @@ module.exports = {
                         fallback: 'style-loader'
                     })
                 )
+            },
+            {
+                test: /\.gql$/,
+                include: SRC + '/graphql',
+                // Parse GraphQL queries into standard GraphQL AST(document objects)
+                // https://github.com/apollographql/graphql-tag/blob/master/README.md
+                loader: 'graphql-tag/loader'
             },
             {
                 test: /\.(ttf|eot|woff|woff2)$/,

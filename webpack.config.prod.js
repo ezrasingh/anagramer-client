@@ -14,11 +14,11 @@ const PUBLIC_PATH = '/'
 
 module.exports = {
     context: SRC,
-    entry: SRC + '/app.js',
+    entry: SRC + '/index.js',
     output: {
         path: BUILD,
         publicPath: PUBLIC_PATH,
-        filename: 'app.js'
+        filename: 'index.js'
     },
     module: {
         loaders: [
@@ -36,6 +36,13 @@ module.exports = {
                     "postcss-loader",
                     "sass-loader"
                 ]
+            },
+            {
+                test: /\.gql$/,
+                include: SRC + '/graphql',
+                // Parse GraphQL queries into standard GraphQL AST(document objects)
+                // https://github.com/apollographql/graphql-tag/blob/master/README.md
+                loader: 'graphql-tag/loader'
             },
             {
                 test: /\.(ttf|eot|woff|woff2)$/,
