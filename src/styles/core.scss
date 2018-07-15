@@ -11,7 +11,9 @@ TABLE OF CONTENTS
 0. Imports
 ========================================================================== */
 
-
+@import 'mixins';
+@import 'layout';
+@import 'components/status';
 
 /* ==========================================================================
 1. Resets and base setup
@@ -21,6 +23,7 @@ html, body{
     margin: 0;
     height: 100%;
     background-color: #e8eaea;
+    overflow: hidden;
 }
 
 body {
