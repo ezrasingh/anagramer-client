@@ -1,0 +1,4 @@
+
+query getAnagrams($word: String!){
+    anagrams(word: $word)
+}
