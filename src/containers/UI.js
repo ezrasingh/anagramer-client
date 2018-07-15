@@ -1,32 +1,32 @@
 import { Component } from 'react'
 // GraphQL bindings
 import { Query } from 'react-apollo'
-import getAnagrams from '../graphql/queries.gql'
+import { getAnagrams } from '../graphql/queries.gql'
 //Components
 import Layout from '../components/Layout'
 
 class UI extends Component{
-    state = { query: "" }
+    state = { word : "" }
     updateQuery(event){
         this.setState({ query: event.target.value })
     }
+    actions = {
+        update: this.updateQuery.bind(this)
+    }
     render(){
-        const actions = {
-            update: this.updateQuery.bind(this)
-        }
         return(
             <Query 
                 query={getAnagrams} 
-                variables={{ word: this.state.query }}
+                variables={this.state}
             >
                 {( { loading, error, data } ) => {
-                    if(error){
-                        console.error(error)
+                    if(error) { 
+                        console.error(error) 
                     }
                     return <Layout
                                 loading={loading} 
                                 anagrams={data}
-                                actions={actions}
+                                actions={this.actions}
                                 state={this.state}
                             />
                 }}

@@ -24,3 +24,5 @@ const Layout = ({ state, actions, loading, anagrams }) => {
         </section>
     )
 }
+
+export default Layout
