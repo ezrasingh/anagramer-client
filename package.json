@@ -39,6 +39,7 @@
     "apollo-cache-inmemory": "^1.2.5",
     "apollo-client": "^2.3.5",
     "apollo-link-http": "^1.5.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.2",
     "handlebars": "^4.0.11",

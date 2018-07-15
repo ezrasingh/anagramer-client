@@ -13,6 +13,7 @@
                 "@babel/preset-react"
             ],
             "plugins": [ 
+                "transform-class-properties",
                 "transform-object-rest-spread"
             ],
             "sourceMaps": "inline"
@@ -30,6 +31,7 @@
                 "@babel/preset-react"
             ],
             "plugins": [ 
+                "transform-class-properties",
                 "transform-object-rest-spread"
             ],
             "sourceMaps": false
