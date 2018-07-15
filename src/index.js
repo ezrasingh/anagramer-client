@@ -2,18 +2,17 @@
 import { render } from 'react-dom'
 import UI from './containers/UI'
 // Redux
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import app from './app'
+import { ApolloProvider } from 'react-apollo'
+import client from './client'
 // Styling
 import './styles/core.scss'
 // Utils
 import * as serviceWorker from './serviceWorker'
 
 const App = (
-	<Provider store={createStore(app)}>
+	<ApolloProvider client={client}>
 		<UI/>
-	</Provider>
+	</ApolloProvider>
 )
 
 const root = document.getElementById('app-root')
