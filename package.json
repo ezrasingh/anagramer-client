@@ -1,0 +1,16 @@
+{
+  "name": "anagramer-client",
+  "version": "1.0.0",
+  "description": "Basic UI for interacting with the Anagramer server",
+  "scripts": {
+    "start": "webpack-dashboard --minimal -- webpack-dev-server --config=webpack.config.dev.js"
+  },
+  "author": "Ezra Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.12.0",
+    "webpack-cli": "^2.1.5",
+    "webpack-dashboard": "^2.0.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
