@@ -1,0 +1,40 @@
+{
+    "env": {
+        "development": {
+            "presets": [ 
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "browsers": [ "last 2 versions", "ie >= 7" ]
+                        }
+                    }
+                ],
+                "@babel/preset-react"
+            ],
+            "plugins": [ 
+                "transform-class-properties",
+                "transform-object-rest-spread"
+            ],
+            "sourceMaps": "inline"
+        },
+        "production": {
+            "presets": [ 
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": {
+                            "browsers": [ "last 2 versions", "ie >= 7" ]
+                        }
+                    }
+                ],
+                "@babel/preset-react"
+            ],
+            "plugins": [ 
+                "transform-class-properties",
+                "transform-object-rest-spread"
+            ],
+            "sourceMaps": false
+        }
+    }
+}

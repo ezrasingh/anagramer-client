@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        {{> seo }}
+        <title>Anagramer</title>
+        <link rel="manifest" href="{{ publicPath }}manifest.json">
+        {{! Performance Optimizations }}
+        {{> prefetch }}
+        {{! CSS Plugins }}
+        {{> plugins }}
+    </head>
+    <body>
+        <noscript>
+            You need to enable JavaScript to run this app.
+        </noscript>
+        <div id="app-root">
+            {{! React entry point }}
+        </div>
+        {{#if dev}} {{!-- Measure app startup time --}}
+            <script type="text/javascript">
+                window.onload = function(){
+                    var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart; 
+                    console.log('Load Time: '+ loadTime / 1000 + ' seconds');
+                }
+            </script>
+        {{/if}}
+    </body>
+</html>

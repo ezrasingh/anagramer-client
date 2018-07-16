@@ -1,0 +1,42 @@
+@mixin mobile-breakpoint{
+    @include mobile{
+        float: none;
+        padding: 0;
+        width: 75%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        @content
+    }
+}
+
+.hero-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .container{
+        // Search container and branding
+        &.is-pulled-left{
+            width: 30%;
+            padding: 2em;
+            @include mobile-breakpoint{
+                input::placeholder{
+                    font-size: 0.75em;
+                }
+            }
+        }
+        // Status container
+        &.is-pulled-right{
+            width: 30%;
+            padding: 2em;
+            @include mobile-breakpoint{
+                .box{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
+}
