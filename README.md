@@ -2,7 +2,7 @@
 
 Basic UI for interacting with the Anagram server
 
-![Anagramer UI](https://cdn.pbrd.co/images/HuGgrNE.png "Search for anagrams ... like really fast :)")
+![Anagramer UI](https://cdn.pbrd.co/images/HuK0tEC.png "Search for anagrams ... like really fast :)")
 
 ## Try Locally!
 
