@@ -67,6 +67,10 @@ module.exports = {
         ]
     },
     plugins: [
+        // Provide React globally
+        new webpack.ProvidePlugin({
+            'React' : 'react'
+        }),
         // Bundle all css into a single css bundle
         new ExtractTextPlugin('app.css'),
         // Copy assets to BUILD env
